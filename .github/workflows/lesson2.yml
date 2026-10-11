@@ -1,0 +1,17 @@
+name: Lesson-2 WorkFlow - Checkout code
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  check-out-code:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository code
+        run: actions/checkout@v4
+
+      - name: Checkout Project File
+        run: ls -al
