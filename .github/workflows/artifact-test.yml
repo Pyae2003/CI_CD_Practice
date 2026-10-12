@@ -30,6 +30,8 @@ jobs:
                 path: dist/
 
     deploy:
+        needs: build
+
         runs-on: ubuntu-latest
         steps:
             - name: Get Artifact From Build
